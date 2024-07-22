@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Geolocations</h1>
+
+<div id="geolocations">
+  <% @geolocations.each do |geolocation| %>
+    <%= render geolocation %>
+    <p>
+      <%= link_to "Show this geolocation", geolocation %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New geolocation", new_geolocation_path %>
