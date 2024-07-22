@@ -17,7 +17,7 @@ class GeolocationsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create geolocation" do
     assert_difference("Geolocation.count") do
-      post geolocations_url, params: { geolocation: { continent_code: @geolocation.continent_code, continent_name: @geolocation.continent_name, ip: @geolocation.ip, type: @geolocation.type } }
+      post geolocations_url, params: { geolocation: { continent_code: @geolocation.continent_code, continent_name: @geolocation.continent_name, ip: @geolocation.ip, typeip: @geolocation.typeip } }
     end
 
     assert_redirected_to geolocation_url(Geolocation.last)
@@ -34,7 +34,7 @@ class GeolocationsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update geolocation" do
-    patch geolocation_url(@geolocation), params: { geolocation: { continent_code: @geolocation.continent_code, continent_name: @geolocation.continent_name, ip: @geolocation.ip, type: @geolocation.type } }
+    patch geolocation_url(@geolocation), params: { geolocation: { continent_code: @geolocation.continent_code, continent_name: @geolocation.continent_name, ip: @geolocation.ip, typeip: @geolocation.typeip } }
     assert_redirected_to geolocation_url(@geolocation)
   end
 

@@ -1,19 +1,17 @@
-FROM ruby:3.0-bullseye as base
+FROM ruby:latest
 
+# install stuff
+ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update -qq && apt-get install -y build-essential apt-utils libpq-dev nodejs
 
-WORKDIR /docker
+# create app folder
+RUN mkdir -p /app
+WORKDIR /app
 
+# install ruby stuff
 RUN gem update && gem install rails && gem install bundler
-
-COPY Gemfile* ./docker
-
+COPY . /app
 RUN bundle install
 
-ADD . /docker/app
-
-ARG DEFAULT_PORT 3000
-
-EXPOSE ${DEFAULT_PORT}
-
-# CMD [ "bundle","exec", "puma", "config.ru"] # CMD ["rails","server"]
+# CMD ["rails","server"]
+CMD [ "bundle","exec", "puma", "config.ru"]
