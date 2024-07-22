@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @geolocation %>
+
+<div>
+  <%= link_to "Edit this geolocation", edit_geolocation_path(@geolocation) %> |
+  <%= link_to "Back to geolocations", geolocations_path %>
+
+  <%= button_to "Destroy this geolocation", @geolocation, method: :delete %>
+</div>
