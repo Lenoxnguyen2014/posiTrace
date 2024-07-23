@@ -1,3 +1,5 @@
+require 'socket'
+
 class GeolocationsController < ApplicationController
   before_action :set_geolocation, only: %i[ show edit update destroy ]
   
@@ -16,8 +18,13 @@ class GeolocationsController < ApplicationController
     @geolocation = Geolocation.new
   end
 
+  # GET /geolocations/1/edit
+  def edit
+  end
+
   # POST /geolocations or /geolocations.json
   def create
+    search_ip = 
     result = Ipstack::CreateIpStack.new(geolocation_params[:ip]).find_local()
     format_result = { 'ip' => result['ip'], 
                       'typeip' => result['type'], 
@@ -73,7 +80,9 @@ class GeolocationsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_geolocation
-      @geolocation = Geolocation.find(params[:id])
+      # add logic here tmr: if id not empty or nil, then assign else check url, else => return error
+      @geolocation = Geolocation.find(params[:id]) | @geolocation = Socket.getaddress(Geolocation.find(params[:url]))
+      puts @geolocation
     end
 
     # Only allow a list of trusted parameters through.

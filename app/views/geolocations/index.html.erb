@@ -8,6 +8,11 @@
     <p>
       <%= link_to "Show this geolocation", geolocation %>
     </p>
+    <div>
+    <%= link_to "Edit this geolocation", edit_geolocation_path(geolocation) %>
+
+    <%= button_to "Destroy this geolocation", geolocation, method: :delete %>
+    </div>
   <% end %>
 </div>
 

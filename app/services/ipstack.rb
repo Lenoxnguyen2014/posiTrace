@@ -6,6 +6,7 @@ module Ipstack
         end
 
         def request_api(url)
+            puts url
             response = Excon.get(
                     url,
                     headers: {
