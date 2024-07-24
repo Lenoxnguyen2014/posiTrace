@@ -103,6 +103,7 @@ GEM
       activesupport (>= 6.0.0)
       railties (>= 6.0.0)
     io-console (0.7.2)
+    ipaddress (0.8.3)
     irb (1.14.0)
       rdoc (>= 4.0.0)
       reline (>= 0.4.2)
@@ -233,6 +234,7 @@ DEPENDENCIES
   dotenv-rails
   excon
   importmap-rails
+  ipaddress
   jbuilder
   pg (~> 1.1)
   puma (~> 5.0)

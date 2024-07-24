@@ -24,17 +24,17 @@ default: &default
 development:
   adapter: postgresql
   encoding: unicode
-  database: positrace_development
+  database: positrace
   pool: 5
-  username: positrace
+  username: posiapp
   password: password
 
 test:
   adapter: postgresql
   encoding: unicode
-  database: positrace_test
+  database: positrace
   pool: 5
-  username: positrace
+  username: posiapp
   password: password
 
   # The specified database role being used to connect to postgres.
@@ -75,7 +75,7 @@ test:
 # Instead, provide the password or a full connection URL as an environment
 # variable when you boot the app. For example:
 #
-#   DATABASE_URL="postgres://myuser:mypass@localhost/somedatabase"
+# DATABASE_URL="postgres://posiapp:password@localhost/positrace"
 #
 # If the connection URL is provided in the special DATABASE_URL environment
 # variable, Rails will automatically merge its configuration values on top of
@@ -91,5 +91,5 @@ test:
 production:
   <<: *default
   database: posiapp_production
-  username: positrace
-  password: <%= ENV["POSIAPP_DATABASE_PASSWORD"] %>
+  username: posiapp
+  password: password

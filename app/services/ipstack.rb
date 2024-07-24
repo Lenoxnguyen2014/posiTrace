@@ -6,7 +6,6 @@ module Ipstack
         end
 
         def request_api(url)
-            puts url
             response = Excon.get(
                     url,
                     headers: {
@@ -14,12 +13,14 @@ module Ipstack
                         'X-RapidAPI-Key' => @key
                     }
                 )
+            puts response
             return JSON.parse(response.body)
                 
             return nil if response.status != 200
         end
 
         def find_local()
+            puts @ip
             request_api(
             "http://api.ipstack.com/#{@ip}?access_key=#{@key}"
             )
