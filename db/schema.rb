@@ -30,7 +30,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_07_22_024627) do
     t.string "city"
     t.string "zip"
     t.string "latitude"
-    t.string "longtitude"
+    t.string "longitude"
     t.jsonb "location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

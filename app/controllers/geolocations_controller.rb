@@ -44,10 +44,9 @@ class GeolocationsController < ApplicationController
                       'city' => result['city'],
                       'zip' => result['zip'],
                       'latitude' => result['latitude'],
-                      'longtitude' => result['longtitude'],
+                      'longitude' => result['longitude'],
                       'location' => result['location']
                     }
-
     @geolocation = Geolocation.new(format_result)
 
     respond_to do |format|

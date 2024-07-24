@@ -13,7 +13,7 @@ class CreateGeolocations < ActiveRecord::Migration[7.0]
       t.string :city
       t.string :zip
       t.string :latitude
-      t.string :longtitude
+      t.string :longitude
       t.jsonb :location
 
       t.timestamps
