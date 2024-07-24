@@ -4,4 +4,5 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  match 'all' => 'geolocations#all', :as => :all, :via=> [:get, :post]
 end

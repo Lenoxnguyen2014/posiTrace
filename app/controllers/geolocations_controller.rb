@@ -2,7 +2,7 @@ require 'socket'
 
 class GeolocationsController < ApplicationController
   before_action :set_geolocation, only: %i[ show edit update destroy ]
-  
+
   # GET /geolocations or /geolocations.json
   def index
     @geolocations = Geolocation.all
@@ -11,6 +11,11 @@ class GeolocationsController < ApplicationController
   # GET /geolocations/1 or /geolocations/1.json
   def show
     render json: @geolocation
+  end
+
+  def all
+    @geolocations = Geolocation.all
+    render json: @geolocations, status: 200
   end
 
   # GET /geolocations/new
@@ -24,9 +29,10 @@ class GeolocationsController < ApplicationController
 
   # POST /geolocations or /geolocations.json
   def create
-    Geolocation.check_geolocation_params
-    # @geolocation.check_geolocation_params
-    result = Ipstack::CreateIpStack.new(geolocation_params[:ip]).find_local()
+    ip = params[:geolocation][:ip]
+    url = params[:geolocation][:url]
+  
+    result = Ipstack::CreateIpStack.new(ip, url).find_local()
     format_result = { 'ip' => result['ip'], 
                       'typeip' => result['type'], 
                       'continent_code' => result['continent_code'], 
@@ -78,17 +84,7 @@ class GeolocationsController < ApplicationController
     end
   end
 
-  def check_geolocation_params
-    @geolocation.update
-    1
-    # attributes = geolocation_params.clone
-    # ip = attributes[:geolocation][:ip]
-    # url = attributes[:geolocation][:url]
-    # if url.present?
-    #   attributes[:geolocation][:ip] = IPSocket.getaddress(url)
-    # end
-    # @geolocation.update_attributes(attributes)
-  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_geolocation
@@ -97,7 +93,7 @@ class GeolocationsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def geolocation_params
-      params.require(:geolocation).permit(:ip)      
+      params.require(:geolocation).permit(:ip, :url)      
     end
 
 

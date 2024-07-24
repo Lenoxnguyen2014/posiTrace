@@ -1,7 +1,9 @@
 <p style="color: green"><%= notice %></p>
 
 <h1>Geolocations</h1>
-
+<%= link_to "New geolocation", new_geolocation_path %>
+<br />
+<%= link_to "Show all geolocations", '/all' %>
 <div id="geolocations">
   <% @geolocations.each do |geolocation| %>
     <%= render geolocation %>
@@ -16,4 +18,3 @@
   <% end %>
 </div>
 
-<%= link_to "New geolocation", new_geolocation_path %>
