@@ -2,7 +2,7 @@ FROM ruby:latest
 
 # install stuff
 ENV DEBIAN_FRONTEND=noninteractive
-RUN apt-get update -qq && apt-get install -y build-essential apt-utils libpq-dev nodejs
+RUN apt-get update -qq && apt-get install -y build-essential apt-utils libpq-dev nodejs postgresql-client postgresql
 
 # create app folder
 RUN mkdir -p /app

@@ -2,21 +2,22 @@ version: '3'
 services:
   db:
     image: postgres
-    container_name: posiapp-postgres
+    container_name: positrace-postgres
     volumes:
       - ./tmp/db:/var/lib/postgresql/data
     command: "postgres -c 'max_connections=500'"
     environment:
-      POSTGRES_DB: postgres
+      POSTGRES_DB: positrace
       POSTGRES_USER: posiapp
       POSTGRES_PASSWORD: password
     ports:
       - "5432:5432"
-  posiapp:
+  app:
     build:
       context: .
       dockerfile: Dockerfile
     environment:
+      DB_ADDR: db
       DB_HOST: db
       DB_NAME: positrace
       DB_USERNAME: posiapp
