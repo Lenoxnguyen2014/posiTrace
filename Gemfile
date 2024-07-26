@@ -45,7 +45,7 @@ gem "dotenv-rails", groups: [:development, :test]
 gem "ipaddress"
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
-
+gem 'rspec', '~> 3.4'
 # Use Sass to process CSS
 # gem "sassc-rails"
 
