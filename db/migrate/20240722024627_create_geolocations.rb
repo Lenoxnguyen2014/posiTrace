@@ -12,8 +12,8 @@ class CreateGeolocations < ActiveRecord::Migration[7.0]
       t.string :region_name
       t.string :city
       t.string :zip
-      t.decimal :latitude, {:precision=>16, :scale=>6}
-      t.decimal :longitude, {:precision=>16, :scale=>6}
+      t.decimal :latitude
+      t.decimal :longitude
       t.jsonb :location
 
       t.timestamps
