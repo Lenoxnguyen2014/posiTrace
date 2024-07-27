@@ -152,6 +152,8 @@ GEM
     excon (0.111.0)
     factory_bot (6.4.6)
       activesupport (>= 5.0.0)
+    faker (3.4.2)
+      i18n (>= 1.8.11, < 2)
     ffi (1.17.0-x64-mingw-ucrt)
     globalid (1.2.1)
       activesupport (>= 6.1)
@@ -339,6 +341,7 @@ DEPENDENCIES
   dotenv-rails
   excon
   factory_bot (~> 6.4, >= 6.4.6)
+  faker (~> 3.4, >= 3.4.1)
   importmap-rails
   ipaddress
   jbuilder
