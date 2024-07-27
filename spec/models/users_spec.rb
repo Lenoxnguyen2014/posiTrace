@@ -9,13 +9,9 @@ RSpec.describe User, type: :model do
 
     it "login successfully" do
         login_as user
-        
     end
   end
-  # it "not accept ipv6" do
-  #   geolocation.ip = Faker::Internet.ip_v6_address
-  #   expect(@geolocation)
-  # end
+
 
   # it "not valid if ip is empty" do
   # end

@@ -84,6 +84,7 @@ GEM
       rack-test (>= 0.6.3)
       regexp_parser (>= 1.5, < 3.0)
       xpath (~> 3.2)
+    coderay (1.1.3)
     concurrent-ruby (1.3.3)
     crass (1.0.6)
     cucumber (9.2.0)
@@ -205,6 +206,9 @@ GEM
       racc (~> 1.4)
     orm_adapter (0.5.0)
     pg (1.5.6)
+    pry (0.14.2)
+      coderay (~> 1.1)
+      method_source (~> 1.0)
     psych (5.1.2)
       stringio
     public_suffix (6.0.0)
@@ -349,6 +353,7 @@ DEPENDENCIES
   jbuilder
   jsonapi-serializer
   pg (~> 1.1)
+  pry (~> 0.14.2)
   puma (~> 5.0)
   rack-cors
   rails (~> 7.0.8, >= 7.0.8.4)

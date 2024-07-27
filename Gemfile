@@ -81,6 +81,7 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
+  gem 'pry', '~> 0.14.2'
   gem 'shoulda-matchers', '~> 6.0'
   gem 'faker', '~> 3.4', '>= 3.4.1'
   gem "byebug", platform: :mri
