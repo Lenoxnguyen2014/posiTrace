@@ -1,6 +1,7 @@
 require "test_helper"
 
 class GeolocationsControllerTest < ActionDispatch::IntegrationTest
+  include Devise::Test::IntegrationHelpers
   setup do
     @geolocation = geolocations(:one)
   end
