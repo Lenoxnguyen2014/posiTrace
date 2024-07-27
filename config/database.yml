@@ -29,7 +29,7 @@ development:
   database: positrace
   pool: 5
   username: posiapp
-  password: <%= ENV["POSITRACE_DATABASE_PASSWORD"] %>
+  password: <%= ENV["DB_PASSWORD"] %>
 
 test:
   adapter: postgresql
@@ -38,7 +38,7 @@ test:
   database: positrace
   pool: 5
   username: posiapp
-  password: <%= ENV["POSITRACE_DATABASE_PASSWORD"] %>
+  password: <%= ENV["DB_PASSWORD"] %>
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -96,4 +96,4 @@ production:
   database: positrace
   url:  <%= ENV["POSITRACE_DATABASE_URL"] %>
   username: posiapp
-  password: <%= ENV["POSITRACE_DATABASE_PASSWORD"] %>
+  password: <%= ENV["DB_PASSWORD"] %>
