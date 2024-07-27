@@ -16,6 +16,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    container_name: app
     environment:
       DB_ADDR: db
       DB_HOST: db
