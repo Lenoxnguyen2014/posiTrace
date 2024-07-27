@@ -1,0 +1,18 @@
+current directory: C:/Users/ACER/OneDrive/Documents/posiTrace/vendor/bundle/ruby/3.3.0/gems/nio4r-2.7.3/ext/nio4r
+C:/Ruby33-x64/bin/ruby.exe extconf.rb
+
+current directory: C:/Users/ACER/OneDrive/Documents/posiTrace/vendor/bundle/ruby/3.3.0/gems/nio4r-2.7.3/ext/nio4r
+make DESTDIR\= sitearchdir\=./.gem.20240726-16116-ish2yd sitelibdir\=./.gem.20240726-16116-ish2yd clean
+make: *** No rule to make target 'clean'.  Stop.
+
+current directory: C:/Users/ACER/OneDrive/Documents/posiTrace/vendor/bundle/ruby/3.3.0/gems/nio4r-2.7.3/ext/nio4r
+make DESTDIR\= sitearchdir\=./.gem.20240726-16116-ish2yd sitelibdir\=./.gem.20240726-16116-ish2yd
+make: Nothing to be done for 'all'.
+
+current directory: C:/Users/ACER/OneDrive/Documents/posiTrace/vendor/bundle/ruby/3.3.0/gems/nio4r-2.7.3/ext/nio4r
+make DESTDIR\= sitearchdir\=./.gem.20240726-16116-ish2yd sitelibdir\=./.gem.20240726-16116-ish2yd install
+make: Nothing to be done for 'install'.
+
+current directory: C:/Users/ACER/OneDrive/Documents/posiTrace/vendor/bundle/ruby/3.3.0/gems/nio4r-2.7.3/ext/nio4r
+make DESTDIR\= sitearchdir\=./.gem.20240726-16116-ish2yd sitelibdir\=./.gem.20240726-16116-ish2yd clean
+make: *** No rule to make target 'clean'.  Stop.

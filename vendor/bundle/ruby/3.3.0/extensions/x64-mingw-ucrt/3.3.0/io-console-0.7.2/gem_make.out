@@ -1,0 +1,29 @@
+current directory: C:/Users/ACER/OneDrive/Documents/posiTrace/vendor/bundle/ruby/3.3.0/gems/io-console-0.7.2/ext/io/console
+C:/Ruby33-x64/bin/ruby.exe extconf.rb
+checking for rb_io_path()... yes
+checking for rb_io_descriptor()... yes
+checking for rb_io_get_write_io()... yes
+checking for rb_io_closed_p()... yes
+checking for rb_io_open_descriptor()... yes
+checking for HAVE_RUBY_FIBER_SCHEDULER_H... yes
+creating Makefile
+
+current directory: C:/Users/ACER/OneDrive/Documents/posiTrace/vendor/bundle/ruby/3.3.0/gems/io-console-0.7.2/ext/io/console
+make DESTDIR\= sitearchdir\=./.gem.20240726-12652-i4tz5x sitelibdir\=./.gem.20240726-12652-i4tz5x clean
+bash.exe: warning: could not find /tmp, please create!
+
+current directory: C:/Users/ACER/OneDrive/Documents/posiTrace/vendor/bundle/ruby/3.3.0/gems/io-console-0.7.2/ext/io/console
+make DESTDIR\= sitearchdir\=./.gem.20240726-12652-i4tz5x sitelibdir\=./.gem.20240726-12652-i4tz5x
+generating console-x64-mingw-ucrt.def
+bash.exe: warning: could not find /tmp, please create!
+compiling console.c
+linking shared-object io/console.so
+
+current directory: C:/Users/ACER/OneDrive/Documents/posiTrace/vendor/bundle/ruby/3.3.0/gems/io-console-0.7.2/ext/io/console
+make DESTDIR\= sitearchdir\=./.gem.20240726-12652-i4tz5x sitelibdir\=./.gem.20240726-12652-i4tz5x install
+bash.exe: warning: could not find /tmp, please create!
+/usr/bin/install -c -m 0755 console.so ./.gem.20240726-12652-i4tz5x/io
+
+current directory: C:/Users/ACER/OneDrive/Documents/posiTrace/vendor/bundle/ruby/3.3.0/gems/io-console-0.7.2/ext/io/console
+make DESTDIR\= sitearchdir\=./.gem.20240726-12652-i4tz5x sitelibdir\=./.gem.20240726-12652-i4tz5x clean
+bash.exe: warning: could not find /tmp, please create!

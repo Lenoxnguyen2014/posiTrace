@@ -1,0 +1,3 @@
+module PG
+	POSTGRESQL_LIB_PATH = "C:/PROGRA~1/POSTGR~1/16/bin"
+end

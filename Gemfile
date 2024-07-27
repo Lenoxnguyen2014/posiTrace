@@ -45,7 +45,8 @@ gem "dotenv-rails", groups: [:development, :test]
 gem "ipaddress"
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
-gem 'rspec', '~> 3.4'
+gem "rspec"
+gem 'rspec-rails'
 # Use Sass to process CSS
 # gem "sassc-rails"
 
@@ -63,6 +64,8 @@ group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
 end
 
+
+
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
@@ -78,5 +81,7 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
-
+  gem "byebug", platform: :mri
+  gem 'cucumber-rails', require: false
+  gem 'database_cleaner'
 end

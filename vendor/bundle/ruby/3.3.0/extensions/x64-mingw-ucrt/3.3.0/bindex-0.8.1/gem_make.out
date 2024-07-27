@@ -1,0 +1,23 @@
+current directory: C:/Users/ACER/OneDrive/Documents/posiTrace/vendor/bundle/ruby/3.3.0/gems/bindex-0.8.1/ext/skiptrace
+C:/Ruby33-x64/bin/ruby.exe extconf.rb
+creating Makefile
+
+current directory: C:/Users/ACER/OneDrive/Documents/posiTrace/vendor/bundle/ruby/3.3.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= sitearchdir\=./.gem.20240726-16116-iagdog sitelibdir\=./.gem.20240726-16116-iagdog clean
+bash.exe: warning: could not find /tmp, please create!
+
+current directory: C:/Users/ACER/OneDrive/Documents/posiTrace/vendor/bundle/ruby/3.3.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= sitearchdir\=./.gem.20240726-16116-iagdog sitelibdir\=./.gem.20240726-16116-iagdog
+generating cruby-x64-mingw-ucrt.def
+bash.exe: warning: could not find /tmp, please create!
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.so
+
+current directory: C:/Users/ACER/OneDrive/Documents/posiTrace/vendor/bundle/ruby/3.3.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= sitearchdir\=./.gem.20240726-16116-iagdog sitelibdir\=./.gem.20240726-16116-iagdog install
+bash.exe: warning: could not find /tmp, please create!
+/usr/bin/install -c -m 0755 cruby.so ./.gem.20240726-16116-iagdog/skiptrace/internal
+
+current directory: C:/Users/ACER/OneDrive/Documents/posiTrace/vendor/bundle/ruby/3.3.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= sitearchdir\=./.gem.20240726-16116-iagdog sitelibdir\=./.gem.20240726-16116-iagdog clean
+bash.exe: warning: could not find /tmp, please create!

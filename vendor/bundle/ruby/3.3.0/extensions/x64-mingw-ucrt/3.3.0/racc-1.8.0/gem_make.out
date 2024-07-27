@@ -1,0 +1,23 @@
+current directory: C:/Users/ACER/OneDrive/Documents/posiTrace/vendor/bundle/ruby/3.3.0/gems/racc-1.8.0/ext/racc/cparse
+C:/Ruby33-x64/bin/ruby.exe extconf.rb
+creating Makefile
+
+current directory: C:/Users/ACER/OneDrive/Documents/posiTrace/vendor/bundle/ruby/3.3.0/gems/racc-1.8.0/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20240726-16116-abwoxk sitelibdir\=./.gem.20240726-16116-abwoxk clean
+bash.exe: warning: could not find /tmp, please create!
+
+current directory: C:/Users/ACER/OneDrive/Documents/posiTrace/vendor/bundle/ruby/3.3.0/gems/racc-1.8.0/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20240726-16116-abwoxk sitelibdir\=./.gem.20240726-16116-abwoxk
+generating cparse-x64-mingw-ucrt.def
+bash.exe: warning: could not find /tmp, please create!
+compiling cparse.c
+linking shared-object racc/cparse.so
+
+current directory: C:/Users/ACER/OneDrive/Documents/posiTrace/vendor/bundle/ruby/3.3.0/gems/racc-1.8.0/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20240726-16116-abwoxk sitelibdir\=./.gem.20240726-16116-abwoxk install
+bash.exe: warning: could not find /tmp, please create!
+/usr/bin/install -c -m 0755 cparse.so ./.gem.20240726-16116-abwoxk/racc
+
+current directory: C:/Users/ACER/OneDrive/Documents/posiTrace/vendor/bundle/ruby/3.3.0/gems/racc-1.8.0/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20240726-16116-abwoxk sitelibdir\=./.gem.20240726-16116-abwoxk clean
+bash.exe: warning: could not find /tmp, please create!
