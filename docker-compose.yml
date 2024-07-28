@@ -17,6 +17,9 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: app
+    volumes:
+      - .:/app
+    command: "bash -c 'bundle install && bundle exec puma config.ru'"
     environment:
       DB_ADDR: ${DB_ADDR}
       DB_HOST: ${DB_HOST}
