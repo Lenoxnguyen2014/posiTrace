@@ -3,7 +3,7 @@ require 'socket'
 class GeolocationsController < ApplicationController
   skip_before_action :verify_authenticity_token
 
-  before_action :authenticate_user!
+  # before_action :authenticate_user!
   before_action :set_geolocation, only: %i[ show edit update destroy ]
   
 
@@ -37,6 +37,7 @@ class GeolocationsController < ApplicationController
     url = params[:geolocation][:url]
     
     result = Ipstack::CreateIpStack.new(ip, url).find_local()
+    
     begin
     @geolocation = Geolocation.new(
         ip: result["ip"], 
@@ -73,8 +74,31 @@ class GeolocationsController < ApplicationController
 
   # PATCH/PUT /geolocations/1 or /geolocations/1.json
   def update
+    ip = params[:geolocation][:ip]
+    url = params[:geolocation][:url]
+    
+    result = Ipstack::CreateIpStack.new(ip, url).find_local()
+    begin
+    format_result = {
+      ip: result["ip"], 
+      typeip: result["type"], 
+      continent_code: result["continent_code"], 
+      continent_name: result["continent_name"],
+      country_code: result["country_code"],
+      country_name: result["country_name"],
+      region_code: result["region_code"],
+      region_name: result["region_name"],
+      city: result["city"],
+      zip: result["zip"],
+      latitude: result["latitude"],
+      longitude: result["longitude"],
+      location: result["location"]
+    }
+    rescue
+      render json: { error: "No such ip; check the submitted ip. We accept ipv4 only", status: 400 }, status: 400
+    end
     respond_to do |format|
-      if @geolocation.update(geolocation_params)
+      if @geolocation.update(format_result)
         format.html { redirect_to geolocation_url(@geolocation), notice: "Geolocation was successfully updated."}
         format.json { render :show, status: :ok, location: @geolocation }
       else

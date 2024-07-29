@@ -34,8 +34,8 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  url:  <%= ENV["POSITRACE_DATABASE_URL"] %>
-  database: positrace
+  url:  <%= ENV["POSITRACE_DATABASE_TEST_URL"] %>
+  database: positrace_test
   pool: 5
   username: posiapp
   password: <%= ENV["DB_PASSWORD"] %>

@@ -12,11 +12,5 @@ RSpec.describe User, type: :model do
     end
   end
 
-
-  # it "not valid if ip is empty" do
-  # end
-
-  # it "no valid if ip is random string" do
-
-  # end
+    
 end
