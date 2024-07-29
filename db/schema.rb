@@ -29,8 +29,8 @@ ActiveRecord::Schema[7.0].define(version: 2024_07_26_223751) do
     t.string "region_name"
     t.string "city"
     t.string "zip"
-    t.string "latitude"
-    t.string "longitude"
+    t.decimal "latitude", precision: 16, scale: 6
+    t.decimal "longitude", precision: 16, scale: 6
     t.jsonb "location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

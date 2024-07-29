@@ -3,7 +3,7 @@ require 'socket'
 class GeolocationsController < ApplicationController
   skip_before_action :verify_authenticity_token
 
-  # before_action :authenticate_user!
+  before_action :authenticate_user!
   before_action :set_geolocation, only: %i[ show edit update destroy ]
   
 
