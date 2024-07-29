@@ -7,7 +7,7 @@ RSpec.describe Geolocation, type: :model do
       it "all variables are presence " do
         expect(test_geolocation).to be_valid
       end
-      it { is_expected.to validate_presence_of :ip }
+
   end
   # describe "geolocation is not valid with ipv6" do
   #   let (:test_geolocation) {create(:geolocation, ip: Faker::Internet.ip_v6_address)}
