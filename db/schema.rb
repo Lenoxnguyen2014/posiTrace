@@ -14,7 +14,24 @@ ActiveRecord::Schema[7.0].define(version: 2024_07_26_223751) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  # Custom types defined in this database.
+  # Note that some types may not work with other database engines. Be careful if changing database.
+  create_enum "geolocation_type", ["ipv4", "ipv6"]
+
   create_table "geolocations", force: :cascade do |t|
+    t.string "ip"
+    t.enum "typeip", default: "ipv4", enum_type: "geolocation_type"
+    t.string "continent_code"
+    t.string "continent_name"
+    t.string "country_code"
+    t.string "country_name"
+    t.string "region_code"
+    t.string "region_name"
+    t.string "city"
+    t.string "zip"
+    t.string "latitude"
+    t.string "longitude"
+    t.jsonb "location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

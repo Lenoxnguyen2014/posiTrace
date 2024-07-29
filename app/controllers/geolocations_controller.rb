@@ -3,7 +3,7 @@ require 'socket'
 class GeolocationsController < ApplicationController
   skip_before_action :verify_authenticity_token
 
-  before_action :authenticate_user!
+  # before_action :authenticate_user!
   before_action :set_geolocation, only: %i[ show edit update destroy ]
   
 
@@ -38,21 +38,22 @@ class GeolocationsController < ApplicationController
     
     result = Ipstack::CreateIpStack.new(ip, url).find_local()
     begin
-      format_result = { 'ip' => result['ip'], 
-      'typeip' => result['type'], 
-      'continent_code' => result['continent_code'], 
-      'continent_name' => result['continent_name'], 
-      'country_code' => result['country_code'], 
-      'country_name' => result['country_name'], 
-      'region_code' => result['country_code'], 
-      'region_name' => result['region_name'],
-      'city' => result['city'],
-      'zip' => result['zip'],
-      'latitude' => result['latitude'],
-      'longitude' => result['longitude'],
-      'location' => result['location']
-    }
-      @geolocation = Geolocation.new(format_result)
+    @geolocation = Geolocation.new(
+        ip: result["ip"], 
+        typeip: result["type"], 
+        continent_code: result["continent_code"], 
+        continent_name: result["continent_name"],
+        country_code: result["country_code"],
+        country_name: result["country_name"],
+        region_code: result["region_code"],
+        region_name: result["region_name"],
+        city: result["city"],
+        zip: result["zip"],
+        latitude: result["latitude"],
+        longitude: result["longitude"],
+        location: result["location"]
+    )
+
 
       respond_to do |format|
       if @geolocation.save
